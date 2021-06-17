@@ -102,6 +102,9 @@ figure img {
     #logo img {
         height: 50px;
     }
+    #options-menu-mobile {
+        display: none;
+    }
     #options-desktop{
         display: flex;
     }
