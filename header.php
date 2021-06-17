@@ -3,10 +3,10 @@
         <img src="img/logo.png" alt="logo">
     </figure>
 
-    <buttons id="buttons-mobile">
+    <button id="buttons-mobile">
         <img id="btn-open-menu-mobile" class="btn-open-menu-mobile-on" src="img/bars.png" alt="logo">
         <img id="btn-close-menu-mobile" class="btn-close-menu-mobile-off" src="img/x.png" alt="logo">
-    </buttons>
+    </button>
 
     <section id="options-desktop">
         <nav>
