@@ -9,18 +9,26 @@ body {
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 button {
     border: none;
     background: none;
 }
+
 ul {
     padding-left: 0;
 }
+
 header {
     display: flex;
     position: fixed;
@@ -37,13 +45,178 @@ figure {
     margin: 0;
     padding: 0;
 }
+
 figure img {
     margin: 0;
 }
 
-@media (orientation: portrait){
+h2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-shadow: 0 0 15px #25252581;
+    z-index: 9999;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 170, 170);
+    border: 5px solid rgb(29, 29, 29);
+    border-radius: 10%;
+    height: 30%;
+    width: 30%;
+    padding: 50px 0;
+    box-shadow: inset 0 0 25px #252525;
+    overflow: hidden;
+}
+.id_and_img{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    /* background */
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10%;
+    overflow: hidden;
+    box-shadow: inset 0 0 25px #0000007e;
+    z-index: 2;
+}
+
+.grass{
+    position: absolute;
+    background-color: rgb(39, 156, 45);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.fire{
+    position: absolute;
+    background-color: rgb(218, 22, 22);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.water{
+    position: absolute;
+    background-color: rgb(0, 174, 255);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
+}
+.electric{
+    position: absolute;
+    background-color: rgb(228, 243, 12);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.bug{
+    position: absolute;
+    background-color: rgb(77, 19, 184);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.poison{
+    position: absolute;
+    background-color: rgb(170, 19, 184);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.normal{
+    position: absolute;
+    background-color: rgb(255, 243, 138);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.ground{
+    position: absolute;
+    background-color: rgb(136, 79, 14);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.fairy{
+    position: absolute;
+    background-color: rgb(255, 65, 208);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.fighting{
+    position: absolute;
+    background-color: rgb(247, 166, 17);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.psychic{
+    position: absolute;
+    background-color: rgb(17, 247, 170);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.id_number, .img_pokemon {
+    z-index: 999;
+}
+
+.id_number {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 3px #252525;
+}
+
+.shadow {
+    position: absolute;
+    clip-path: circle(101.4% at 0 0);
+    background-color: rgba(255, 255, 255, 0.267);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(92, 92, 92, 0.425);
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 10px;
     
-    #logo img{
+    text-shadow: 0 0 10px #2525258f;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.info p {
+    z-index: 999;
+}
+
+.shadow_info{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.404);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (orientation: portrait) {
+    #logo img {
         height: 60px;
         width: auto;
     }
@@ -53,23 +226,22 @@ figure img {
         align-items: center;
         box-sizing: border-box;
     }
-
-    .btn-open-menu-mobile-on{
+    .btn-open-menu-mobile-on {
         display: inline-block;
     }
-    .btn-close-menu-mobile-off{
+    .btn-close-menu-mobile-off {
         display: none;
     }
-    .btn-open-menu-mobile-off{
+    .btn-open-menu-mobile-off {
         display: none;
     }
-    .btn-close-menu-mobile-on{
+    .btn-close-menu-mobile-on {
         display: inline-block;
     }
-    .options-menu-mobile-off{
+    .options-menu-mobile-off {
         display: none;
     }
-    .options-menu-mobile-on{
+    .options-menu-mobile-on {
         display: flex;
         margin: 0;
         padding: 0;
@@ -81,7 +253,7 @@ figure img {
         align-items: center;
         z-index: 8888;
     }
-    .options-menu-mobile-on ul{
+    .options-menu-mobile-on ul {
         list-style: none;
         padding-left: 0 !important;
     }
@@ -90,12 +262,12 @@ figure img {
         padding: 25% 0;
         text-align: center;
     }
-    #options-desktop{
+    #options-desktop {
         display: none;
     }
 }
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
     body {
         font-size: 20px;
     }
@@ -105,7 +277,7 @@ figure img {
     #options-menu-mobile {
         display: none;
     }
-    #options-desktop{
+    #options-desktop {
         display: flex;
     }
     #options-desktop nav ul {
@@ -115,8 +287,8 @@ figure img {
         justify-content: center;
         align-items: center;
     }
-    #options-desktop ul li{
-        padding: 0 5%;
+    #options-desktop ul li {
+        margin: 0 5%;
         text-align: center;
         text-decoration: none;
         box-sizing: content-box;

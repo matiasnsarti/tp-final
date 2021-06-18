@@ -24,6 +24,6 @@
     <ul>
         <li><a href="">Home</a></li>
         <li><a href="">Contacto</a></li>
-        <li><a href="">Cerrar sesión</a></li>
+        <li><a href="">Inicar sesión</a></li>
     </ul>
 </section>
