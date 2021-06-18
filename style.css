@@ -97,6 +97,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .fire{
     position: absolute;
@@ -104,6 +105,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .water{
     position: absolute;
@@ -119,6 +121,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .bug{
     position: absolute;
@@ -126,6 +129,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .poison{
     position: absolute;
@@ -133,13 +137,15 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .normal{
     position: absolute;
-    background-color: rgb(255, 243, 138);
+    background-color: rgb(224, 155, 77);
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .ground{
     position: absolute;
@@ -147,6 +153,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .fairy{
     position: absolute;
@@ -154,6 +161,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .fighting{
     position: absolute;
@@ -161,6 +169,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .psychic{
     position: absolute;
@@ -168,6 +177,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0;
+    box-shadow: inset 0 0 25px #353535;
 }
 .id_number, .img_pokemon {
     z-index: 999;
@@ -209,10 +219,11 @@ h2 {
 
 .shadow_info{
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.404);
+    background-color: rgba(255, 255, 255, 0.233);
     width: 100%;
     height: 100%;
     z-index: 1;
+    box-shadow: inset 0 0 25px #33333375;
 }
 
 @media (orientation: portrait) {
