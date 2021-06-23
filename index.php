@@ -27,7 +27,7 @@
 
         <article id="main_article">
             <p>In this site you can find cards with information of every first generation's pokemon.</p>
-            <p>You have to just find for name, type or number of id. We hope you enjoy it!.</p>
+            <p>You have to just find for name or number of id. We hope you enjoy it!.</p>
         </article>
 
         <!-- Creación del buscador -->
