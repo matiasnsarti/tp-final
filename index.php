@@ -16,49 +16,34 @@
 
     ini_set('display errors', 1);
     error_reporting(E_ALL);
-    /* 
-    require_once 'header.php'; */ ?>
 
-    <?php
-
-    // Consumo de primer API.
-    $api_response = file_get_contents('https://pokeapi.co/api/v2/pokemon?limit=151');
-    $pokemones = json_decode($api_response, true);
-    $pokemon = $pokemones['results'];
-
-
-    for ($i = 0; $i < count($pokemon); $i++) {
-        echo '<section class="card">';
-
-            echo '<h2>' . $pokemon[$i]['name'] . '</h2>';
-            echo '<div class="shadow"> </div>';
-
-        // Consumiendo API dentro API para extraer la info.
-
-        // https://pokeapi.co/api/v2/pokemon/1/ abrir en mozilla para ver detalles.
-
-        $api2_response = file_get_contents($pokemon[$i]['url']);
-        $info_pokemon = json_decode($api2_response, true);
-            echo '<article class="id_and_img">';
-                echo '<p class="id_number"><strong>#'. $info_pokemon['id'] . '</strong></p>';
-                echo '<figure class="img_pokemon"><img src=\'' . $info_pokemon['sprites']['front_default'] . '\'></figure>';
-                echo '<div class="shadow"> </div>';
-                echo '<div class=' . $info_pokemon['types'][0]['type']['name'] . '> </div>';
-            echo '</article>';
-
-            echo '<article class="info">';
-                echo '<p><strong>Tipo:</strong> ' . $info_pokemon['types'][0]['type']['name'] . '</p>';
-                echo '<p><strong>Peso:</strong> ' . $info_pokemon['height'] .' lbs.</p>';
-                echo '<p><strong>Altura:</strong> ' . $info_pokemon['weight'] .'"</p>';
-                echo '<div class="shadow_info"> </div>';//SI SALE MAL BORRAR ESTE
-                echo '<div class=' . $info_pokemon['types'][0]['type']['name'] . '> </div>';
-            echo '</article>';
-
-        echo '</section>';
-    }
+    require_once 'header.php';
 
     ?>
+    <main>
+        <div class="shadow_bg"> </div>
 
+        <h1>Welcome to <br>Pokemon Data Site</h1>
+
+        <article id="main_article">
+            <p>In this site you can find cards with information of every first generation's pokemon.</p>
+            <p>You have to just find for name, type or number of id. We hope you enjoy it!.</p>
+        </article>
+
+        <!-- Creación del buscador -->
+
+        <form action="search.php" method="get">
+            <label>
+                Search one or more pokemons!!!
+                <section id="searcher">
+                    <input type="text" id="search" name="search" required>
+                    <button type="submit"><img src="img/search.png" id="search_icon"></button>
+                </section>
+            </label>
+        </form>
+        
+    </main>
+    <?php require_once 'footer.php'?>
 </body>
 
 </html>

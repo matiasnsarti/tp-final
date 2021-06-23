@@ -5,25 +5,52 @@ const btnOpenMenuMobile = document.querySelector('#btn-open-menu-mobile');
 const btnCloseMenuMobile = document.querySelector('#btn-close-menu-mobile');
 const optionsMenuMobile = document.querySelector('#options-menu-mobile');
 
-btnMobile.addEventListener('click', function(){
+btnMobile.addEventListener('click', function () {
     btnOpenMenuMobile.classList.toggle('btn-open-menu-mobile-off');
     btnCloseMenuMobile.classList.toggle('btn-close-menu-mobile-on');
     optionsMenuMobile.classList.toggle('options-menu-mobile-on');
 });
 
-/* Cambio de color del background */
+/* Slider */
 
-const backgroundCard = document.querySelector('#background_card');
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".card");
+let sliderSectionLast = sliderSection[sliderSection.length - 1];
 
-if ($info_pokemon['types'][0]['type']['name'] == 'fire') {
-    backgroundCard.classList.toggle('background_red');
+const btnL = document.querySelector("#btn_left");
+const btnR = document.querySelector("#btn_right");
+
+slider.insertAdjacentElement('afterbegin', sliderSectionLast)
+
+/* btn Right */
+function next() {
+    let sliderSectionFirst = document.querySelectorAll(".card")[0];
+    slider.style.marginleft = "-200%";
+    slider.style.transitio = "all 0.5s";
+    setTimeout(function () {
+        slider.style.transition = "none";
+        slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+        slider.stylemarginLeft = "-100%"
+    }, 500);
 }
-if ($info_pokemon['types'][0]['type']['name'] == 'grass') {
-    backgroundCard.classList.toggle('background_red');
+
+btnR.addEventListener('click', function () {
+    next();
+})
+
+/* btn Left */
+function prev() {
+    let sliderSection = document.querySelectorAll(".card");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginleft = "0";
+    slider.style.transitio = "all 0.5s";
+    setTimeout(function () {
+        slider.style.transition = "none";
+        slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+        slider.stylemarginLeft = "-100%"
+    }, 500);
 }
-if ($info_pokemon['types'][0]['type']['name'] == 'water') {
-    backgroundCard.classList.toggle('background_blue');
-}
-if ($info_pokemon['types'][0]['type']['name'] == 'electric') {
-    backgroundCard.classList.toggle('background_yellow');
-}
+
+btnL.addEventListener('click', function () {
+    prev();
+})
