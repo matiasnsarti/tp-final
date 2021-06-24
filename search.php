@@ -33,7 +33,7 @@
                 echo '<section id="img_info_searched">';
 
                 echo '<figure id="img_pokemon_search_done"><img src=\'' . $pokemon['sprites']['other']['dream_world']['front_default'] . '\'></figure>';
-                
+
                 echo '<article id="info_search_done">';
                 echo '<p><strong>Type:</strong> ' . $pokemon['types'][0]['type']['name'] . '</p>';
                 echo '<p><strong>Weight:</strong> ' . $pokemon['height'] . ' lbs.</p>';
@@ -69,5 +69,8 @@
 
     ?>
 </body>
+
+
+<script src="js/code.js"></script>
 
 </html>

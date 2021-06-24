@@ -44,6 +44,6 @@
     <?php require_once 'footer.php'?>
 </body>
 
-</html>
-
 <script src="js/code.js"></script>
+
+</html>
