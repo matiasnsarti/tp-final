@@ -1,6 +1,6 @@
 <header>
     <figure id="logo">
-        <a href="http://localhost/php/tp_final/"><img src="img/logo.png" alt="logo"></a>
+        <a href="index.php"><img src="img/logo.png" alt="logo"></a>
     </figure>
 
     <button id="buttons-mobile">
@@ -11,9 +11,9 @@
     <section id="options-desktop">
         <nav>
             <ul>
-                <li><a href="http://localhost/php/tp_final/">Home</a></li>
-                <li><a href="http://localhost/php/tp_final/search.php">Your search</a></li>
-                <li><a href="http://localhost/php/tp_final/all_pokemons.php">Meet them all !</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="search.php">Your search</a></li>
+                <li><a href="all_pokemons.php">Meet them all !</a></li>
             </ul>
         </nav>
     </section>
@@ -22,8 +22,8 @@
 
 <section id="options-menu-mobile" class="options-menu-mobile-off">
     <ul>
-        <li><a href="http://localhost/php/tp_final/">Home</a></li>
-        <li><a href="http://localhost/php/tp_final/search.php">Your search</a></li>
-        <li><a href="http://localhost/php/tp_final/all_pokemons.php">Meet them all !</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="search.php">Your search</a></li>
+        <li><a href="all_pokemons.php">Meet them all !</a></li>
     </ul>
 </section>

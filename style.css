@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     overflow-x: hidden;
-    
     background-color: #2f8359;
 }
 
@@ -64,12 +63,12 @@ header {
     z-index: 99999999999999;
     box-shadow: 0 0 5px #252525;
 }
-#options-desktop nav ul li:hover{
-    text-shadow: 0 0 15px #000000,
-    0 0 15px #000000,0 0 15px #000000
-    ;
+
+#options-desktop nav ul li:hover {
+    text-shadow: 0 0 15px #000000, 0 0 15px #000000, 0 0 15px #000000;
     transition: ease 1s;
 }
+
 #logo img {
     height: 50px;
     width: auto;
@@ -77,17 +76,16 @@ header {
 
 /* Main */
 
-main{
+main {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    min-height: 100vh;
     width: 100vw;
     overflow: hidden;
     margin-top: 50px;
-    background-color: #2f8359;
-    background-image: url(img/main.png);
     background-repeat: no-repeat;
     background-size: 100vh, 100vw;
     color: #fff;
@@ -96,8 +94,8 @@ main{
 .shadow_bg {
     position: absolute;
     background-color: #00000030;
-    ;
     height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -130,9 +128,11 @@ h1 {
     align-items: center;
     margin-bottom: 50px;
 }
+
 #searcher input {
     padding: 0 20px;
 }
+
 #searcher button {
     margin-left: 10px;
 }
@@ -157,8 +157,10 @@ form label {
     box-shadow: inset 0 0 15px #25252585;
     align-self: center;
 }
+
 /* ERROR MESSAGE */
-#search_error_message{
+
+#search_error_message {
     height: 100vh;
     color: #fff;
     font-size: 25px;
@@ -171,9 +173,11 @@ form label {
     z-index: 99999;
     text-align: center;
 }
+
 #search_error_message article {
     margin-top: -10%;
 }
+
 #search_error_message button {
     margin-top: 10%;
     font-size: 30px;
@@ -184,27 +188,32 @@ form label {
     text-shadow: 0 0 5px #252525;
     box-shadow: 0 0 15px #252525, inset 0 0 15px #252525;
 }
-#search_error_message button:hover{
+
+#search_error_message button:hover {
     border: 7px solid rgb(252, 235, 0);
     color: rgb(252, 235, 0);
     text-shadow: 0 0 5px rgb(255, 245, 105);
     box-shadow: 0 0 5px rgb(255, 245, 105);
     transition: ease 1s;
 }
+
 /* SEARCH DONE */
-#img_info_searched{
+
+#img_info_searched {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: space-around;
     width: 100vw;
-    z-index: 9999999;
+    z-index: 99999;
     margin-bottom: 15%;
 }
-#img_pokemon_search_done{
+
+#img_pokemon_search_done {
     display: inline-flex;
 }
-#info_search_done{
+
+#info_search_done {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,21 +224,24 @@ form label {
     padding-right: 3%;
     border-radius: 5%;
 }
+
 #moves li {
     margin-left: 50px;
 }
+
 /* SLIDER */
+
 #arrows_down a img:hover {
     filter: contrast(40%) sepia(1) hue-rotate(20deg) saturate(1000%);
     transition: ease 0.75s;
 }
+
 .container-slider {
     height: 500px;
     width: 100%;
     overflow: hidden;
     margin: auto;
     position: relative;
-    
     margin-bottom: 10%;
 }
 
@@ -478,6 +490,7 @@ h2 {
 
 footer {
     display: flex;
+    position: fixed;
     bottom: 0;
     height: 50px;
     width: 100vw;
@@ -495,6 +508,9 @@ footer {
 }
 
 @media (orientation: portrait) {
+    header {
+        width: 100vw;
+    }
     #logo {
         justify-content: center;
         align-items: center;
@@ -560,6 +576,9 @@ footer {
         background-color: #2f8359;
         width: 100vw;
     }
+    #main_search {
+        min-height: 100vh;
+    }
     h1 {
         padding: 10% 10% 15% 10%;
         font-size: 30px;
@@ -567,32 +586,31 @@ footer {
     #main_article {
         font-size: 22px;
         padding: 5% 5% 5%;
-        margin-bottom: 20%;
+        margin-bottom: 8%;
         background-color: #00000021;
     }
-    
     #search_icon {
         height: 30px;
         width: 30px;
     }
-    #img_info_searched{
+    #img_info_searched {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100vw;
-        z-index: 9999999;
+        z-index: 99999;
         margin-bottom: 15%;
     }
-    #info_search_done{
+    #info_search_done {
         margin-left: 0;
         font-size: 20px;
         padding: 2% 5%;
     }
-    #img_pokemon_search_done img{
+    #img_pokemon_search_done img {
         max-width: 300px;
     }
-    #img_pokemon_search_done{
+    #img_pokemon_search_done {
         margin-bottom: 10%;
     }
     #arrows_down {
@@ -626,6 +644,9 @@ footer {
     .info {
         width: 50%;
         font-size: 18px;
+    }
+    footer {
+        font-size: 15px;
     }
 }
 
@@ -661,6 +682,7 @@ footer {
     main {
         background-size: 100vw;
         align-items: center;
+        background-image: url('img/main.png');
     }
     nav ul li {
         box-sizing: content-box;
@@ -677,16 +699,22 @@ footer {
     #main_article {
         font-size: 18px;
         padding: 0 5% 0;
-        margin-bottom: 10%;
+        margin-bottom: 0%;
+    }
+    form label {
+        font-size: 15px;
+    }
+    #searcher {
+        margin-top: 0;
     }
     #search_icon {
         height: 30px;
         width: 30px;
     }
-    #img_pokemon_search_done img{
+    #img_pokemon_search_done img {
         max-width: 200px;
     }
-    #info_search_done{
+    #info_search_done {
         margin-left: 10%;
         font-size: 20px;
         padding: 2% 5%;
@@ -695,10 +723,11 @@ footer {
         justify-content: center;
         align-items: center;
         z-index: 99999;
-        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-bottom: 60px;
     }
     /* Slider */
-    .container-slider{
+    .container-slider {
         margin-bottom: 0;
     }
     #btn_left {
@@ -737,7 +766,8 @@ footer {
     }
     /* Footer */
     footer {
-        font-size: 15px;
+        height: 25px;
+        font-size: 11px;
     }
 }
 
@@ -780,15 +810,13 @@ footer {
     /* Main */
     main {
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        min-height: 100vh;
         width: 100%;
         background-size: cover;
         background-image: url('img/main.png');
         background-color: #2f8359;
-    }
-    #main_search{
-        min-height: 84vh;
     }
     h1 {
         font-size: 70px;
@@ -809,6 +837,8 @@ footer {
     .container-slider {
         height: 500px;
         width: 400px;
+        
+        margin-bottom: 100px;
     }
     .card {
         display: flex;
@@ -845,5 +875,11 @@ footer {
         height: 100%;
         z-index: 1;
         box-shadow: inset 0 0 25px #33333375;
+    }
+    form label {
+        font-size: 18px;
+    }
+    #searcher {
+        margin-top: 10px;
     }
 }

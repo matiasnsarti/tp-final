@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokmon Data Site: Meet them all!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?version_1">
+    <link rel="shortcut icon" href="img/pokeball.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
