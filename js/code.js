@@ -1,4 +1,4 @@
-/* Header -Menu mobile */
+/* Header - Menu mobile */
 
 const btnMobile = document.querySelector('#buttons-mobile');
 const btnOpenMenuMobile = document.querySelector('#btn-open-menu-mobile');

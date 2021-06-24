@@ -1,4 +1,4 @@
 <footer>
-    <p>Diseño y desarrollo por<br>
+    <p>Designed and developed by<br>
     Matías Sarti</p>
 </footer>

@@ -64,7 +64,12 @@ header {
     z-index: 99999999999999;
     box-shadow: 0 0 5px #252525;
 }
-
+#options-desktop nav ul li:hover{
+    text-shadow: 0 0 15px #000000,
+    0 0 15px #000000,0 0 15px #000000
+    ;
+    transition: ease 1s;
+}
 #logo img {
     height: 50px;
     width: auto;
@@ -152,6 +157,40 @@ form label {
     box-shadow: inset 0 0 15px #25252585;
     align-self: center;
 }
+/* ERROR MESSAGE */
+#search_error_message{
+    height: 100vh;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    background-color: #25252571;
+    z-index: 99999;
+    text-align: center;
+}
+#search_error_message article {
+    margin-top: -10%;
+}
+#search_error_message button {
+    margin-top: 10%;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    border: 7px solid #fff;
+    border-radius: 20px;
+    padding: 2% 5%;
+    text-shadow: 0 0 5px #252525;
+    box-shadow: 0 0 15px #252525, inset 0 0 15px #252525;
+}
+#search_error_message button:hover{
+    border: 7px solid rgb(252, 235, 0);
+    color: rgb(252, 235, 0);
+    text-shadow: 0 0 5px rgb(255, 245, 105);
+    box-shadow: 0 0 5px rgb(255, 245, 105);
+    transition: ease 1s;
+}
 /* SEARCH DONE */
 #img_info_searched{
     display: flex;
@@ -180,7 +219,10 @@ form label {
     margin-left: 50px;
 }
 /* SLIDER */
-
+#arrows_down a img:hover {
+    filter: contrast(40%) sepia(1) hue-rotate(20deg) saturate(1000%);
+    transition: ease 0.75s;
+}
 .container-slider {
     height: 500px;
     width: 100%;
@@ -744,6 +786,9 @@ footer {
         background-size: cover;
         background-image: url('img/main.png');
         background-color: #2f8359;
+    }
+    #main_search{
+        min-height: 84vh;
     }
     h1 {
         font-size: 70px;
